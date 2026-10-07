@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Work+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --espresso: #2b1b14;
+  --espresso-dark: #1a0f0a;
+  --cream: #f3e9da;
+  --cream-light: #fff8f0;
+  --caramel: #c68642;
+  --caramel-hover: #b07435;
+  --gold: #d9a94e;
+  --gold-glow: rgba(217, 169, 78, 0.25);
+
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+
+  --shadow-subtle: 0 4px 14px rgba(43, 27, 20, 0.06);
+  --shadow-hover: 0 12px 28px rgba(43, 27, 20, 0.16);
+  --shadow-deep: 0 20px 40px rgba(26, 15, 10, 0.35);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--cream-light);
+  color: var(--espresso);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Redesigned Typography Alignment Classes */
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--cream) 0%,
+    var(--gold) 60%,
+    var(--caramel) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--espresso-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--caramel);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--espresso-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--espresso);
+}
